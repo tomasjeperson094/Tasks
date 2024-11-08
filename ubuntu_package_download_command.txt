@@ -1,0 +1,5 @@
+dpkg -l | grep docker-buildx
+apt-cache pkgnames | grep docker
+apt-get download $(apt-rdepends <package>|grep -v "^ ")
+apt-get download $(apt-rdepends <package>|grep -v "^ " |grep -v "^libc-dev$")
+
